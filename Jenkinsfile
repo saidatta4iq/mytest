@@ -8,5 +8,11 @@ pipeline {
         echo 'it will be the third step'
       }
     }
+    stage('build') {
+      steps {
+        echo 'this my first jenkins build '
+        echo $WORKSPACE  
+      }
+    }
   }
 }
