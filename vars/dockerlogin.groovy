@@ -6,6 +6,7 @@ def call(Map args = new LinkedHashMap()) {
             usernameVariable: 'USERNAME',
             passwordVariable: 'PASSWORD'
     )]
+    print("all are able to start this")
     withCredentials(credentials) {
         sh "docker login --username '${USERNAME}' --password '${PASSWORD}' ${server}"
     }
