@@ -9,6 +9,6 @@ def call(Map args = new LinkedHashMap()) {
     print("all are able to start this")
     withCredentials(credentials) {
         print("'${USERNAME}'")
-        sh "docker login --username '${USERNAME}' --password '${PASSWORD}' '${server}'"
+        sh "cat ~/my_password.txt | docker login --username '${USERNAME}' --password-stdin"
     }
 }
