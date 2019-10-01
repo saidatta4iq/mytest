@@ -7,6 +7,6 @@ def call(Map args = new LinkedHashMap()) {
             passwordVariable: 'PASSWORD'
     )]
     withCredentials(credentials) {
-        sh "cat ~/my_password.txt | docker login --username '${USERNAME}' --password-stdin"
+        sh "docker login --username '${USERNAME}' --password '${PASSWORD}' '${server}'"
     }
 }
